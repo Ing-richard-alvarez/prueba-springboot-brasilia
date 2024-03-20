@@ -1,13 +1,11 @@
 # Prueba Técnica para Expreso Brasilia
 
-Este proyecto fue desarrollado con Springboot haciendo uso de una base de datos construida con Mysql en su versión 8. hay que tener en cuenta que el proyecto de desarrolló con la versión 21 del JDK
+Este proyecto fue desarrollado con Springboot haciendo uso de una base de datos construida con la base de datos H2. hay que tener en cuenta que el proyecto de desarrolló con la versión 21 del JDK
 
 ## Requerimientos
 1. Tener instalado el JDK con la versión 21 y con todas las variables de entorno configurada en el sistema operativo.
-2. Tener instalado Mysql en su versión 8
-3. Tener instalado un editor de código o un IDE de desarrollo como Intellij o eclipse
-4. tener un sistema gestor de bases de datos como Mysql Workbenck o el de su preferencia
-5. Este proyecto corre con Maven
+2. Tener instalado un editor de código o un IDE de desarrollo como Intellij o eclipse
+3. Este proyecto corre con Maven
 
 ## Configuración de la bases de datos
 1. Abrir el sistema gestor de base de datos de su preferencia
@@ -16,9 +14,10 @@ Este proyecto fue desarrollado con Springboot haciendo uso de una base de datos 
 ```bash
 spring.application.name=api-restfull
 spring.jpa.hibernate.ddl-auto=update
-spring.datasource.url=jdbc:mysql://localhost:3306/<database_name>
-spring.datasource.username=user
-spring.datasource.password=your_password
+spring.datasource.url=jdbc:h2:mem:expreso_brasilia_db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
 server.port=8081
 ```
 
